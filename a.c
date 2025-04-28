@@ -6,7 +6,7 @@
 /*   By: lupayet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 10:27:00 by lupayet           #+#    #+#             */
-/*   Updated: 2025/04/28 15:33:35 by lupayet          ###   ########.fr       */
+/*   Updated: 2025/04/28 17:36:31 by lupayet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,21 @@
 int	main(int ac, char *av[])
 {
 	(void)ac;
-	printf("%s\n", ft_strchr(av[1], *av[2]));
-/*
-	printf("%s\n", av[1]);
+//	printf("%s\n", ft_strchr(av[1], *av[2]));
+
+	printf("%s\n\n", av[1]);
+
 	ft_memmove(av[1], &av[1][5], 7);
 	printf("%s\n", av[1]);
 	
-	printf("%s\n", av[2]);
 	memmove(av[2], &av[2][5], 7);
-	printf("%s\n", av[1]);
-	*/
+	printf("%s\n\n", av[2]);
+
+	ft_memmove(&av[3][5], av[3], 7);
+	printf("%s\n", av[3]);
+
+	memmove(&av[4][5], av[4], 7);
+	printf("%s\n", av[4]);
 	return (0);
 }
 
