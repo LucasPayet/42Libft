@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lupayet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/25 14:58:28 by lupayet           #+#    #+#             */
-/*   Updated: 2025/04/28 14:42:41 by lupayet          ###   ########.fr       */
+/*   Created: 2025/04/28 11:48:31 by lupayet           #+#    #+#             */
+/*   Updated: 2025/04/28 13:00:06 by lupayet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+void	ft_bzero(void *s, size_t n)
 {
-	size_t	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
+	if (!s)
+		return ;
+	while (n--)
+	{
+		*(unsigned char *)(s + n) = 0;
+	}
 }
