@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lupayet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/28 15:13:57 by lupayet           #+#    #+#             */
-/*   Updated: 2025/04/29 13:56:21 by lupayet          ###   ########.fr       */
+/*   Created: 2025/04/29 13:36:12 by lupayet           #+#    #+#             */
+/*   Updated: 2025/04/29 13:51:25 by lupayet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
+	char *l;
+
+	l = NULL;
 	while (*s)
 	{
 		if (*s == c)
-			return ((char *)s);
+			l = (char *)s;
 		s++;
 	}
-	if (*s == '\0')
+	if (l == NULL && *s == '\0')
 		return ((char *)s);
-	return (NULL);
+	return (l);
 }
+
