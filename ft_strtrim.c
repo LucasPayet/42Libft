@@ -6,13 +6,13 @@
 /*   By: lupayet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 15:13:57 by lupayet           #+#    #+#             */
-/*   Updated: 2025/05/01 15:43:20 by lupayet          ###   ########.fr       */
+/*   Updated: 2025/05/01 16:32:49 by lupayet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_inset(char	c, const char *set)
+int	ft_inset(char c, const char *set)
 {
 	int	i;
 
