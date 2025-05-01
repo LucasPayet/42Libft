@@ -6,7 +6,7 @@
 /*   By: lupayet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 10:27:00 by lupayet           #+#    #+#             */
-/*   Updated: 2025/05/01 11:55:34 by lupayet          ###   ########.fr       */
+/*   Updated: 2025/05/01 15:40:38 by lupayet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,17 @@
 int	main(int ac, char *av[])
 {
 	(void)ac;
-	char dest[100];
-	char *d;
+	char	*join;
 
-	d = ft_strdup(av[1]);
-	printf("%s\n", d);
-	ft_strlcat(dest, av[2], ft_atoi(av[3]));
-	printf("%s\n", dest);
+	join = ft_strtrim(av[1], av[2]);
+	printf("%s\n", join);
 
+/*
+	char	*substr;
+
+	substr = ft_substr(av[1], ft_atoi(av[2]), ft_atoi(av[3]));
+	printf("%s\n", substr);
+	*/
 /*
 	char	*test;
 	int	size = 0;
