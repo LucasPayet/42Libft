@@ -6,30 +6,60 @@
 /*   By: lupayet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 10:27:00 by lupayet           #+#    #+#             */
-/*   Updated: 2025/04/30 22:54:34 by lupayet          ###   ########.fr       */
+/*   Updated: 2025/05/01 11:55:34 by lupayet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
-#include <bsd/string.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <time.h>
 int	main(int ac, char *av[])
 {
 	(void)ac;
+	char dest[100];
+	char *d;
+
+	d = ft_strdup(av[1]);
+	printf("%s\n", d);
+	ft_strlcat(dest, av[2], ft_atoi(av[3]));
+	printf("%s\n", dest);
+
+/*
+	char	*test;
+	int	size = 0;
+	int	*junk = 0;
+
+	srand( time(0));
+	for (int z = 0; z < 1000; z++)
+	{
+		size = rand() % 16000;
+		junk = malloc(size * sizeof(int));
+		for (int j = 0; j < size; j++)
+		{
+			junk[j] = rand();
+		}
+		free(junk);
+	}
+
+//	char	*test;
+	test = ft_calloc(1000, 1);
+	int i;
+	for (i = 0; i < 100; i++)
+	{
+		char d = test[i] + 48;
+		write(1, &d, 1);
+	}
 	int	len = ft_atoi(av[3]);
-	printf("%d %d\n", ft_strncmp(av[1], av[2], len), len);
-
-	char *c = strnstr(av[1], av[2], len);
-	char *d = ft_strnstr(av[1], av[2], len);
-
-	if (c)
+	char	*c = ft_strnstr(av[1], av[2], len);
+	
+	if (c && test)
 		printf("%s\n", c);
 	else
 		printf("NULL\n");
-	if (d)
-		printf("%s\n", d);
-	else
-		printf("NULL\n");
+	free(test);
+*/
 //	printf("%s\n", (char *)ft_memchr(av[1], *av[2], 5));
 
 /*	printf("%s\n\n", av[1]);

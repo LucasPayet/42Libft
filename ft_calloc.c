@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lupayet <lupayet@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lupayet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/29 17:51:59 by lupayet           #+#    #+#             */
-/*   Updated: 2025/05/01 10:44:06 by lupayet          ###   ########.fr       */
+/*   Created: 2025/05/01 09:33:48 by lupayet           #+#    #+#             */
+/*   Updated: 2025/05/01 10:11:46 by lupayet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	char	*str1;
-	char	*str2;
+	void	*p;
 
-	str1 = (char *)s1;
-	str2 = (char *)s2;
-	while (n-- && *str1 == *str2)
-	{
-		str1++;
-		str2++;
-	}
-	return (*str1 - *str2);
+	if (!nmemb || !size)
+		return (NULL);
+	p = (void *)malloc(size * nmemb);
+	if (!p)
+		return (NULL);
+	ft_bzero(p, size * nmemb);
+	return (p);
 }
