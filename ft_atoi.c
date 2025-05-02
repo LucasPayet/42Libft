@@ -6,7 +6,7 @@
 /*   By: lupayet <lupayet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 19:04:21 by lupayet           #+#    #+#             */
-/*   Updated: 2025/05/01 00:51:09 by lupayet          ###   ########.fr       */
+/*   Updated: 2025/05/02 17:12:43 by lupayet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int ft_isspace(int c)
 {
-	if ((c >= 't' && c <= 'r') || c == ' ')
+	if ((c >= '\t' && c <= '\r') || c == ' ')
 		return (1);
 	return (0);
 }
@@ -28,9 +28,10 @@ int	ft_atoi(const char *nptr)
 	result = 0;
 	while (ft_isspace(*nptr))
 		nptr++;
-	if (*nptr == '-')
+	if (*nptr == '-' || *nptr == '+')
 	{
-		sign = -sign;
+		if (*nptr == '-')
+			sign = -sign;
 		nptr++;
 	}
 	while (ft_isdigit(*nptr))

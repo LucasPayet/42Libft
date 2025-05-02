@@ -6,7 +6,7 @@
 /*   By: lupayet <lupayet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 10:49:12 by lupayet           #+#    #+#             */
-/*   Updated: 2025/05/01 00:21:31 by lupayet          ###   ########.fr       */
+/*   Updated: 2025/05/02 18:29:15 by lupayet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	if (!(*little))
 		return ((char *)big);
 	l_len = ft_strlen(little);
-	if (len < l_len)
+	if (len == 0)
 		return (NULL);
 	i = 0;
-	while (big[i] && i <= len - l_len)
+	while (big[i] && i < len - l_len + 1)
 	{
 		if (!ft_strncmp(&big[i], little, l_len))
 			return ((char *)&big[i]);

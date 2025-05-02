@@ -6,7 +6,7 @@
 /*   By: lupayet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 10:49:57 by lupayet           #+#    #+#             */
-/*   Updated: 2025/05/01 13:16:56 by lupayet          ###   ########.fr       */
+/*   Updated: 2025/05/02 18:34:51 by lupayet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ char *ft_strdup(const char *s)
 	dup = (char *)malloc(len + 1);
 	if (!dup)
 		return (NULL);
+	dup[len] = 0;
 	while (len--)
 		dup[len] = s[len];
-	dup[len] = 0;
 	return (dup);
 }

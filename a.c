@@ -6,7 +6,7 @@
 /*   By: lupayet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 10:27:00 by lupayet           #+#    #+#             */
-/*   Updated: 2025/05/01 17:44:02 by lupayet          ###   ########.fr       */
+/*   Updated: 2025/05/02 17:13:09 by lupayet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,15 @@
 int	main(int ac, char *av[])
 {
 	(void)ac;
-	char	*join;
+	
+	char *str;
 
-	join = ft_itoa(ft_atoi(av[1]));
-	printf("%s\n", join);
+//	str = ft_substr(av[1], ft_atoi(av[2]), ft_atoi(av[3]));
+//	printf("%s\n", str);
 
+	str = ft_itoa(ft_atoi(av[1]));
+	printf("%s\n", str);
+	free(str);
 /*
 	char	*substr;
 

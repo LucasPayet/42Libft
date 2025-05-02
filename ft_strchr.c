@@ -6,7 +6,7 @@
 /*   By: lupayet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 15:13:57 by lupayet           #+#    #+#             */
-/*   Updated: 2025/04/29 13:56:21 by lupayet          ###   ########.fr       */
+/*   Updated: 2025/05/02 17:37:30 by lupayet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,15 @@
 
 char	*ft_strchr(const char *s, int c)
 {
+//	if (!s)
+//		return ((char *)s);
 	while (*s)
 	{
-		if (*s == c)
+		if (*s == (char)c)
 			return ((char *)s);
 		s++;
 	}
-	if (*s == '\0')
+	if ((char)c == '\0')
 		return ((char *)s);
 	return (NULL);
 }

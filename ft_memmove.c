@@ -6,7 +6,7 @@
 /*   By: lupayet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 13:34:34 by lupayet           #+#    #+#             */
-/*   Updated: 2025/04/28 17:41:24 by lupayet          ###   ########.fr       */
+/*   Updated: 2025/05/02 17:18:23 by lupayet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	unsigned char	*d;
 	unsigned char	*s;
 
-	if (!src || !dest)
+	if (!src && !dest)
 		return (dest);
 	d = (unsigned char *)dest;
 	s = (unsigned char *)src;
