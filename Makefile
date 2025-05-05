@@ -6,7 +6,7 @@
 #    By: lupayet <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/24 09:34:40 by lupayet           #+#    #+#              #
-#    Updated: 2025/05/05 17:12:28 by lupayet          ###   ########.fr        #
+#    Updated: 2025/05/05 17:22:19 by lupayet          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,8 @@ SOURCES	= ft_isascii.c ft_strlcat.c ft_toupper.c ft_isdigit.c ft_striteri.c \
 		  ft_strjoin.c ft_itoa.c ft_putnbr_fd.c ft_strrchr.c
 
 BONUS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
-		ft_lstlast_bonus.c ft_lstadd_back_bonus.c
+		ft_lstlast_bonus.c
+#ft_lstadd_back_bonus.c
 
 BONUS_OBJ = $(BONUS:.c=.o)
 
@@ -35,7 +36,7 @@ OBJ	= $(SOURCES:.c=.o)
 
 all:$(NAME)
 
-.c.o:
+%.c%.o: $(INCLUDES) 
 	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
 
 $(NAME): $(OBJ)

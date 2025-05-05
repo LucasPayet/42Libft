@@ -6,7 +6,7 @@
 /*   By: lupayet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/05 16:37:58 by lupayet           #+#    #+#             */
-/*   Updated: 2025/05/05 17:12:01 by lupayet          ###   ########.fr       */
+/*   Updated: 2025/05/05 17:29:12 by lupayet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,9 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	while (lst)
-	{
-		if (!lst -> next)
-			return (lst);
+	if (!lst)
+		return (NULL);
+	while (lst -> next)
 		lst = lst -> next;
-	}
 	return (lst);
 }
