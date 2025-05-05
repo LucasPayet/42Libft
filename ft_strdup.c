@@ -6,13 +6,13 @@
 /*   By: lupayet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 10:49:57 by lupayet           #+#    #+#             */
-/*   Updated: 2025/05/02 18:34:51 by lupayet          ###   ########.fr       */
+/*   Updated: 2025/05/05 11:18:29 by lupayet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
 	size_t	len;
 	char	*dup;

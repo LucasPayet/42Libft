@@ -6,7 +6,7 @@
 /*   By: lupayet <lupayet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 10:49:12 by lupayet           #+#    #+#             */
-/*   Updated: 2025/05/02 18:29:15 by lupayet          ###   ########.fr       */
+/*   Updated: 2025/05/05 11:16:00 by lupayet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t		l_len;
-	size_t		i;
+	size_t	l_len;
+	size_t	i;
 
 	if (!(*little))
 		return ((char *)big);

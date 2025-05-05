@@ -6,7 +6,7 @@
 /*   By: lupayet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 11:48:31 by lupayet           #+#    #+#             */
-/*   Updated: 2025/05/01 00:58:51 by lupayet          ###   ########.fr       */
+/*   Updated: 2025/05/05 11:13:14 by lupayet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned char *b;
+	unsigned char	*b;
 
 	b = (unsigned char *)s;
 	while (n--)

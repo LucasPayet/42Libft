@@ -6,7 +6,7 @@
 /*   By: lupayet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 16:17:54 by lupayet           #+#    #+#             */
-/*   Updated: 2025/05/05 00:56:52 by lupayet          ###   ########.fr       */
+/*   Updated: 2025/05/05 14:55:24 by lupayet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,47 +16,39 @@ static int	count_word(const char *str, char c)
 {
 	int	count;
 	int	i;
+
 	count = 0;
 	i = 0;
-
 	if (*str != c && *str != '\0')
 		count++;
 	while (str[i])
 	{
-		if (str[i] != c  && str[i - 1] == c)
+		if (str[i] != c && str[i - 1] == c)
 			count++;
 		i++;
 	}
 	return (count);
 }
 
-static void	ft_free_list(char **plist)
+static char	**ft_free_list(char **plist)
 {
 	while (*plist)
 	{
 		free(*plist);
 		plist++;
 	}
+	return (NULL);
 }
 
-#include <stdio.h>
-char **ft_split(char const *s, char c)
+static char	**ft_splitw(char const	*s, char c, char **list)
 {
-	int		words;
-	char	**list;
 	size_t	i;
 	size_t	j;
 	size_t	temp;
 
-	words = count_word(s, c);
 	i = 0;
 	j = 0;
 	temp = 0;
-	printf("%d\n", words);
-	list = (char **)malloc((words + 1) * sizeof(char *));
-	if (!list)
-		return (NULL);
-	list[words] = NULL;
 	while (s[i])
 	{
 		if (s[i] == c)
@@ -66,13 +58,24 @@ char **ft_split(char const *s, char c)
 			list[j] = ft_substr(s, temp, (i + 1 - temp));
 			if (!list[j])
 			{
-				ft_free_list(list);
-				return (NULL);
+				return (ft_free_list(list));
 			}
 			j++;
 		}
 		i++;
 	}
-
+	list[j] = NULL;
 	return (list);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	int		words;
+	char	**list;
+
+	words = count_word(s, c);
+	list = (char **)malloc((words + 1) * sizeof(char *));
+	if (!list)
+		return (NULL);
+	return (ft_splitw(s, c, list));
 }

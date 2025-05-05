@@ -6,13 +6,13 @@
 /*   By: lupayet <lupayet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 19:04:21 by lupayet           #+#    #+#             */
-/*   Updated: 2025/05/02 17:12:43 by lupayet          ###   ########.fr       */
+/*   Updated: 2025/05/05 11:13:45 by lupayet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isspace(int c)
+int	ft_isspace(int c)
 {
 	if ((c >= '\t' && c <= '\r') || c == ' ')
 		return (1);
