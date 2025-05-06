@@ -6,7 +6,7 @@
 #    By: lupayet <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/24 09:34:40 by lupayet           #+#    #+#              #
-#    Updated: 2025/05/06 11:03:21 by lupayet          ###   ########.fr        #
+#    Updated: 2025/05/06 11:27:37 by lupayet          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,13 +33,13 @@ BONUS = bonus/ft_lstnew_bonus.c bonus/ft_lstadd_front_bonus.c \
 
 BONUS_OBJ = $(BONUS:.c=.o)
 
-INC = -I includes/libft.h
+OBJ	= $(SRC:.c=.o) 
 
-OBJ	= $(SRC/:.c=.o) 
+INC = -I includes
 
 all:$(NAME)
 
-%.o: %.c $(INC)
+%.o: %.c includes/libft.h
 	$(CC) $(CFLAGS) $(INC) -c $< -o $@
 
 $(NAME): $(OBJ)
@@ -49,7 +49,8 @@ bonus: $(BONUS_OBJ) $(NAME)
 	$(AR) $(NAME) $(BONUS_OBJ)
 
 clean:
-	$(RM) *.o
+	$(RM) src/*.o
+	$(RM) bonus/*.o
 
 fclean: clean
 	$(RM) $(NAME)
@@ -57,5 +58,3 @@ fclean: clean
 re:fclean all
 
 .PHONY: all clean fclean re bonus
-
-#$(CC) $(CFLAGS) $(SOURCES)
