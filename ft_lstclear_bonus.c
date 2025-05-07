@@ -6,7 +6,7 @@
 /*   By: lupayet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 14:01:05 by lupayet           #+#    #+#             */
-/*   Updated: 2025/05/06 14:46:34 by lupayet          ###   ########.fr       */
+/*   Updated: 2025/05/07 13:17:53 by lupayet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 
 	while (*lst)
 	{
-		temp = (*lst) -> next;
+		temp = (*lst)-> next;
 		ft_lstdelone(*lst, del);
 		(*lst) = temp;
 	}

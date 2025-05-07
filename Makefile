@@ -6,16 +6,16 @@
 #    By: lupayet <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/24 09:34:40 by lupayet           #+#    #+#              #
-#    Updated: 2025/05/06 14:58:45 by lupayet          ###   ########.fr        #
+#    Updated: 2025/05/07 13:14:54 by lupayet          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= libft.a
 
-CC	= gcc
+CC	= cc
 AR = ar rcs
 CFLAGS	= -Wall -Wextra -Werror
-RM = rm -rf
+RM = rm -f
 
 SRC	= ft_isascii.c ft_strlcat.c ft_toupper.c ft_isdigit.c \
 	  ft_striteri.c ft_atoi.c ft_putchar_fd.c ft_calloc.c \
@@ -47,8 +47,7 @@ bonus: $(BONUS_OBJ) $(NAME)
 	$(AR) $(NAME) $(BONUS_OBJ)
 
 clean:
-	$(RM) *.o
-	$(RM) *.o
+	$(RM) $(OBJ) $(BONUS_OBJ)
 
 fclean: clean
 	$(RM) $(NAME)
