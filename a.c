@@ -6,7 +6,7 @@
 /*   By: lupayet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 10:27:00 by lupayet           #+#    #+#             */
-/*   Updated: 2025/05/05 14:09:08 by lupayet          ###   ########.fr       */
+/*   Updated: 2025/05/07 11:43:46 by lupayet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,31 +22,31 @@ int	main(int ac, char *av[])
 
 
 //strrchr
-	char s[] = "tripouille";
-	printf("%s\n%d\n", ft_strrchr(s, 't' + 256), 't' + 256);
+//	char s[] = "tripouille";
+//	printf("%s\n%d\n", ft_strrchr(s, 't' + 256), 't' + 256);
 
 //	ft_putnbr_fd(ft_atoi(av[1]), ft_atoi(av[2]));
-//	char **str;
+	char **str;
 
 //	str = ft_substr(av[1], ft_atoi(av[2]), ft_atoi(av[3]));
 //	printf("%s\n", str);
 
-//	str = ft_split(av[1], *av[2]);
+	str = ft_split("nonempty", '\0');
 //	printf("%s\n", str);
-/*	if (!str)
+	if (!str)
 	{
 		printf("NULL");
 		return (1);
 	}
 	int	i = 0;
-//	printf("%s\n\n", str[1]);
+	printf("%s\n\n", str[1]);
 	while (str[i] != NULL)
 	{
 		printf("%s\n", str[i]);
 		free(str[i]);
 		i++;
 	}
-	free(str);*/
+	free(str);
 /*
 	char	*substr;
 

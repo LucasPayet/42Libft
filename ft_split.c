@@ -6,7 +6,7 @@
 /*   By: lupayet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 16:17:54 by lupayet           #+#    #+#             */
-/*   Updated: 2025/05/06 16:40:19 by lupayet          ###   ########.fr       */
+/*   Updated: 2025/05/07 11:47:40 by lupayet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static int	count_word(const char *str, char c)
 
 	count = 0;
 	i = 0;
-	if (*str != c && *str != '\0')
+	if (*str != c && *str != '\0' && c != '\0')
 		count++;
 	while (str[i])
 	{
@@ -71,13 +71,14 @@ static char	**ft_splitw(char const	*s, char c, char **list)
 	list[j] = NULL;
 	return (list);
 }
-
+#include "stdio.h"
 char	**ft_split(char const *s, char c)
 {
 	int		words;
 	char	**list;
 
 	words = count_word(s, c);
+//	printf("%d || %lu\n", words, sizeof((words + 1) * sizeof(char *)));
 	list = (char **)malloc((words + 1) * sizeof(char *));
 	if (!list)
 		return (NULL);
