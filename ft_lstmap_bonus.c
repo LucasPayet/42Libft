@@ -6,7 +6,7 @@
 /*   By: lupayet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 14:58:25 by lupayet           #+#    #+#             */
-/*   Updated: 2025/05/07 11:27:47 by lupayet          ###   ########.fr       */
+/*   Updated: 2025/05/07 12:56:30 by lupayet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new_lst;
-	t_list	*new_content;
+	void	*new_content;
 	t_list	*new_node;
 
 	if (!lst || !f || !del)
